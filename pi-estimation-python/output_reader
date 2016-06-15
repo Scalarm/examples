@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+import json
+
+with open("output.txt") as f:
+  output = f.read()
+
+split_output = output.splitlines()
+estimated_value = float(split_output[0])
+mse = float(split_output[1])
+results = \
+{ 
+  "status": "ok", 
+  "results": 
+    { 
+      "estimation": estimated_value, 
+      "mse": mse 
+    } 
+}
+
+with open("output.json", "w") as f:
+  f.write(json.dumps(results))
+  

@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+import os, commands
+
+# path to a folder with simulation model
+dir = os.path.dirname(
+        os.path.realpath(__file__))
+
+with open("input.txt") as f:
+  num_of_samples = f.read()
+
+cmd = "python \"%s/pi-estimation.py\" %s" % \
+                        (dir, num_of_samples)
+output = commands.getoutput(cmd)
+
+with open("output.txt", "w") as f:
+  f.write(output)
+
