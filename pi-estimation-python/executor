@@ -5,13 +5,15 @@ import os, commands
 dir = os.path.dirname(
         os.path.realpath(__file__))
 
+print "We will call a simulation model from", dir
 with open("input.txt") as f:
   num_of_samples = f.read()
 
 cmd = "python \"%s/pi-estimation.py\" %s" % \
                         (dir, num_of_samples)
+print "We call our simulation model with custom command line:", cmd
 output = commands.getoutput(cmd)
 
+print "We get output:", output
 with open("output.txt", "w") as f:
   f.write(output)
-

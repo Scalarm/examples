@@ -8,15 +8,15 @@ split_output = output.splitlines()
 estimated_value = float(split_output[0])
 mse = float(split_output[1])
 results = \
-{ 
-  "status": "ok", 
-  "results": 
-    { 
-      "estimation": estimated_value, 
-      "mse": mse 
-    } 
+{
+  "status": "ok",
+  "results":
+    {
+      "estimation": estimated_value,
+      "mse": mse
+    }
 }
 
+print "We store structured results in 'output.json' file:", results
 with open("output.json", "w") as f:
   f.write(json.dumps(results))
-  
