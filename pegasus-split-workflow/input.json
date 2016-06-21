@@ -1,0 +1,1 @@
+[{"entities":[{"parameters":[{"id":"file_to_parse","label":"File to parse","type":"string","allowed_values":["any name from the inputs folder"]}]}]}]

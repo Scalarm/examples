@@ -1,0 +1,18 @@
+tr wc {
+    site condorpool {
+        pfn "/usr/bin/wc"
+        arch "x86_64"
+        os "LINUX"
+        type "INSTALLED"
+    }
+}
+
+tr split {
+    site condorpool {
+        pfn "/usr/bin/split"
+        arch "x86_64"
+        os "LINUX"
+        type "INSTALLED"
+    }
+}
+
