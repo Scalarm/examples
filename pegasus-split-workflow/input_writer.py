@@ -21,3 +21,13 @@ commands.getoutput("mkdir ./split-workflow/input")
 commands.getoutput("mkdir ./split-workflow/output")
 cmd = "cp -R %s/inputs/%s ./split-workflow/input/pegasus.html" % (dir, file_name_to_parse)
 commands.getoutput(cmd)
+
+rc = open('./split-workflow/rc.txt')
+rc_content = rc.read()
+rc.close()
+input_file_location = "file://%s" % (dir)
+rc_content.replace('file:///home/tutorial/', input_file_location)
+
+rc = open('./split-workflow/rc.txt', 'w')
+rc.write(rc_content)
+rc.close()
