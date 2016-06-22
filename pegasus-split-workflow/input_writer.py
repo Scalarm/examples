@@ -19,34 +19,7 @@ init_input.close()
 cmd = "pegasus-init split-workflow < init_input.txt"
 print commands.getoutput(cmd)
 
-# print "Copying a folder with the split workflow in Pegasus format"
-# cmd = "cp -R %s/split-workflow ." % (dir)
-# commands.getoutput(cmd)
+print "Generating a split workflow with Pegasus"
 
-# print "Setting the '%s' file as the split workflow input" % (file_name_to_parse)
-# commands.getoutput("mkdir ./split-workflow/input")
-# commands.getoutput("mkdir ./split-workflow/output")
 cmd = "cp -R %s/inputs/%s ./split-workflow/input/pegasus.html" % (dir, file_name_to_parse)
 commands.getoutput(cmd)
-
-# # adjusting Pegasus catalogs
-# rc = open('./split-workflow/rc.txt')
-# rc_content = rc.read()
-# rc.close()
-
-# input_file_location = "file://%s" % (os.getcwd())
-# rc_content = rc_content.replace('file:///home/tutorial', input_file_location)
-
-# rc = open('./split-workflow/rc.txt', 'w')
-# rc.write(rc_content)
-# rc.close()
-
-# sc = open('./split-workflow/sites.xml')
-# sc_content = sc.read()
-# sc.close()
-
-# sc_content = sc_content.replace('/home/tutorial', os.getcwd())
-
-# sc = open('./split-workflow/sites.xml', 'w')
-# sc.write(sc_content)
-# sc.close()
