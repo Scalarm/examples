@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # encoding: UTF-8
-import sys, json, commands
+import sys, json, commands, os
 
 print "Reading input parameters from 'input.json' file"
 with open(sys.argv[1]) as data_file:
