@@ -5,7 +5,7 @@ import sys, json, commands
 print "Reading input parameters from 'input.json' file"
 with open(sys.argv[1]) as data_file:
   data = json.load(data_file)
-  file_name_to_parse = data["file_name"]
+  file_name_to_parse = data["file_to_parse"]
 
 print "File name to parse - ", file_name_to_parse
 
