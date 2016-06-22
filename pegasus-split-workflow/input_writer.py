@@ -17,5 +17,7 @@ cmd = "cp -R %s/split-workflow ." % (dir)
 commands.getoutput(cmd)
 
 print "Setting the '%s' file as the split workflow input" % (file_name_to_parse)
+commands.getoutput("mkdir ./split-workflow/input")
+commands.getoutput("mkdir ./split-workflow/output")
 cmd = "cp -R %s/inputs/%s ./split-workflow/input/pegasus.html" % (dir, file_name_to_parse)
 commands.getoutput(cmd)
