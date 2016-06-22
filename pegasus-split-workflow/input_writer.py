@@ -28,7 +28,7 @@ rc_content = rc.read()
 rc.close()
 
 input_file_location = "file://%s" % (os.getcwd())
-rc_content.replace('file:///home/tutorial', input_file_location)
+rc_content = rc_content.replace('file:///home/tutorial', input_file_location)
 
 rc = open('./split-workflow/rc.txt', 'w')
 rc.write(rc_content)
@@ -38,7 +38,7 @@ sc = open('./split-workflow/sites.xml')
 sc_content = sc.read()
 sc.close()
 
-sc_content.replace('/home/tutorial', os.getcwd())
+sc_content = sc_content.replace('/home/tutorial', os.getcwd())
 
 sc = open('./split-workflow/sites.xml', 'w')
 sc.write(sc_content)
