@@ -16,6 +16,6 @@ print "Copying a folder with the split workflow in Pegasus format"
 cmd = "cp -R %s/split-workflow ." % (dir)
 commands.getoutput(cmd)
 
-print "Setting the '%s' file as the split workflow input"
-cmd = "cp -R %s/inputs/%s ./split-workflow/input/pegasus.html" % (dir, file_name)
+print "Setting the '%s' file as the split workflow input" % (file_name_to_parse)
+cmd = "cp -R %s/inputs/%s ./split-workflow/input/pegasus.html" % (dir, file_name_to_parse)
 commands.getoutput(cmd)
